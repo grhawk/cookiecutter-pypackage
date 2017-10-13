@@ -13,7 +13,7 @@ import {{ cookiecutter.repo_name }}
 
 import {{ cookiecutter.repo_name }}.module_1
 
-asd1.logger_setup()
+{{ cookiecutter.repo_name }}.logger_setup()
 log = logging.getLogger('main')
 
 
