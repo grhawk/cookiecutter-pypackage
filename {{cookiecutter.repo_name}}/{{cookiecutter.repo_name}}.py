@@ -11,7 +11,7 @@ import argparse
 import logging
 import {{ cookiecutter.repo_name }}
 
-log = {{ cookiecutter.repo_name }}.setup_logging()
+log = {{ cookiecutter.repo_name }}.Logger().setup()
 
 def main(args):
     """ Main entry point of the app """
