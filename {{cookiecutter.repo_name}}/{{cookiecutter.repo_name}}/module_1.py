@@ -7,10 +7,13 @@ __author__ = "{{ cookiecutter.full_name }}"
 __version__ = "{{ cookiecutter.version }}"
 __email__ = "{{ cookiecutter.email }}"
 
-from {{ cookiecutter.repo_name }} import Logger
-log = Logger().setup()
+import logging
+log = logging.getLogger('main')
 
-log.warning('Testing log')
+# Do not put log at this level. Could not work properly.
+
+def simple():
+    log.warning('Testing log')
 
 
 if __name__ == '__main__':

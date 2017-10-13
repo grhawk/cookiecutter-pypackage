@@ -11,10 +11,15 @@ import argparse
 import logging
 import {{ cookiecutter.repo_name }}
 
-log = {{ cookiecutter.repo_name }}.Logger().setup()
+import {{ cookiecutter.repo_name }}.module_1
+
+asd1.logger_setup()
+log = logging.getLogger('main')
+
 
 def main(args):
     """ Main entry point of the app """
+    {{ cookiecutter.repo_name }}.module_1.simple() # test the logging
     return "Do some magic!"
 
 
