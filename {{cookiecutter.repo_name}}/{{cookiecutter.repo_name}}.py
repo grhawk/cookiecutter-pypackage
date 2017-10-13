@@ -11,10 +11,11 @@ import argparse
 import logging
 import {{ cookiecutter.repo_name }}
 
+log = {{ cookiecutter.repo_name }}.setup_logging()
 
 def main(args):
     """ Main entry point of the app """
-    {{ cookiecutter.repo_name }}.setup_logging()
+    return "Do some magic!"
 
 
 if __name__ == "__main__":
@@ -31,18 +32,15 @@ if __name__ == "__main__":
     parser.add_argument("-n", "--name", action="store", dest="name")
 
     # Optional verbosity counter (eg. -v, -vv, -vvv, etc.)
-    parser.add_argument(
-        "-v",
-        "--verbose",
-        action="count",
-        default=0,
-        help="Verbosity (-v, -vv, etc)")
+    parser.add_argument("-v", "--verbose",
+                        action="count",
+                        default=0,
+                        help="Verbosity (-v, -vv, etc)")
 
     # Specify output of "--version"
-    parser.add_argument(
-        "--version",
-        action="version",
-        version="%(prog)s (version {version})".format(version=__version__))
+    parser.add_argument("--version",
+                        action="version",
+                        version="%(prog)s (version {version})".format(version=__version__))
 
     args = parser.parse_args()
     main(args)
