@@ -3,18 +3,18 @@
 Module Docstring
 """
 
-__author__ = "Your Name"
-__version__ = "0.1.0"
-__license__ = "MIT"
+__author__ = "{{ cookiecutter.full_name }}"
+__version__ = "{{ cookiecutter.version }}"
+__email__ = "{{ cookiecutter.email }}"
 
 import argparse
-from logzero import logger
+import logging
+import {{ cookiecutter.repo_name }}
 
 
 def main(args):
     """ Main entry point of the app """
-    logger.info("hello world")
-    logger.info(args)
+    {{ cookiecutter.repo_name }}.setup_logging()
 
 
 if __name__ == "__main__":
