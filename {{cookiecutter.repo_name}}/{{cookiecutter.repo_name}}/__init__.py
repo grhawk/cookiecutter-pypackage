@@ -1,3 +1,9 @@
+"""This module demonstrates basic Sphinx usage with Python modules.
+
+
+
+"""
+
 __author__ = 'Riccardo Petraglia'
 __email__ = 'riccardo.petraglia@gmail.com'
 __version__ = '0.1.0'
