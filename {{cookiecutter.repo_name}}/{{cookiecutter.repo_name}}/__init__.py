@@ -10,12 +10,12 @@ __version__ = '0.1.0'
 
 import os
 import logging.config
-
 import yaml
+from pathlib import Path
 
 
 def logger_setup(
-          default_path='logging.yaml',
+          default_path=Path(__file__).resolve().parents[1] / 'logging.yaml',
           default_level=logging.INFO,
           env_key='LOG_CFG'):
     """Setup logging configuration
